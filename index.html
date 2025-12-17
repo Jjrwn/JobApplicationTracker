@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Job Application Tracker</h1>
+
+      <div class="header-actions">
+        <button id="toggleTheme">🌙 Dark Mode</button>
+        <button id="toggleView">Kanban View</button>
+        <button id="openAddModal">+ Add Application</button>
+      </div>
+    </header>
+
+    <section class="filters">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search company or position"
+      />
+
+      <select id="statusFilter">
+        <option value="">All Status</option>
+        <option>Applied</option>
+        <option>Interview</option>
+        <option>Offer</option>
+        <option>Rejected</option>
+      </select>
+
+      <select id="sortSelect">
+        <option value="">Sort By</option>
+        <option value="dateNew">Date: Newest</option>
+        <option value="dateOld">Date: Oldest</option>
+        <option value="companyAsc">Company A-Z</option>
+        <option value="companyDesc">Company Z-A</option>
+      </select>
+    </section>
+
+    <!-- TABLE VIEW -->
+    <section id="tableView" class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="jobList"></tbody>
+      </table>
+    </section>
+
+    <!-- KANBAN VIEW -->
+    <section id="kanbanView" class="kanban hidden">
+      <div class="kanban-column" data-status="Applied">
+        <h3>Applied</h3>
+        <div class="kanban-list"></div>
+      </div>
+      <div class="kanban-column" data-status="Interview">
+        <h3>Interview</h3>
+        <div class="kanban-list"></div>
+      </div>
+      <div class="kanban-column" data-status="Offer">
+        <h3>Offer</h3>
+        <div class="kanban-list"></div>
+      </div>
+      <div class="kanban-column" data-status="Rejected">
+        <h3>Rejected</h3>
+        <div class="kanban-list"></div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="jobModal" class="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Add Application</h2>
+
+        <form id="jobForm">
+          <input type="hidden" id="editIndex" />
+
+          <input id="companyInput" placeholder="Company" required />
+          <input id="positionInput" placeholder="Position" required />
+          <input id="dateInput" type="date" required />
+          <input id="linkInput" placeholder="Application Link" />
+
+          <select id="statusInput">
+            <option>Applied</option>
+            <option>Interview</option>
+            <option>Offer</option>
+            <option>Rejected</option>
+          </select>
+
+          <textarea id="notesInput" placeholder="Notes"></textarea>
+
+          <div class="modal-buttons">
+            <button type="submit" class="saveBtn">Save</button>
+            <button type="button" id="closeModalBtn" class="closeBtn">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
