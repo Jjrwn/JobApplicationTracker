@@ -21,7 +21,7 @@ Built to help users organize applications, monitor progress, and stay consistent
 
 ## 🌐 Live Demo
 
-Try the app live: [Job Application Tracker](https://jjrwn.github.io/job-application-tracker/)
+Try the app live: ([https://jjrwn.github.io/job-application-tracker/](https://jjrwn.github.io/JobApplicationTracker/))
 
 ## 📷 Screenshots
 <img width="958" height="461" alt="JobTracker" src="https://github.com/user-attachments/assets/22505286-31fa-4a3a-b4b2-a910e26e0c00" />
