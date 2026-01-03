@@ -17,7 +17,12 @@ Built to help users organize applications, monitor progress, and stay consistent
 - CSS3 (Flexbox, Responsive Design)
 - JavaScript (ES6)
 - LocalStorage for data persistence
-- 
+
+
+## 🌐 Live Demo
+
+Try the app live: [Job Application Tracker](https://jjrwn.github.io/job-application-tracker/)
+
 ## 📷 Screenshots
 <img width="958" height="461" alt="JobTracker" src="https://github.com/user-attachments/assets/22505286-31fa-4a3a-b4b2-a910e26e0c00" />
 <img width="307" height="268" alt="addApplication" src="https://github.com/user-attachments/assets/3c5c3b82-c527-4994-a2d9-c66ccdc11734" />
